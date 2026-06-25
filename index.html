@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuralForge — AI Content Intelligence Platform</title>
+    <meta name="description" content="Enterprise-grade AI content generation, analytics, and model orchestration platform." />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08VP0C3BKE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08VP0C3BKE');
+    </script>
+
+    <!-- Firebase Analytics -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAIJRakqKtrqAp4k3JliZ3Z12v5lpI-tBM",
+        authDomain: "neuralforge-e99ce.firebaseapp.com",
+        projectId: "neuralforge-e99ce",
+        storageBucket: "neuralforge-e99ce.firebasestorage.app",
+        messagingSenderId: "214654250401",
+        appId: "1:214654250401:web:3da48ac647fb86070d6fe0",
+        measurementId: "G-0NS1Q5141J"
+      };
+      const app = initializeApp(firebaseConfig);
+      getAnalytics(app);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Force hide Bolt badge / watermark / preview header -->
+    <style>
+      div[class*="bolt"],
+      iframe[id*="bolt"],
+      iframe[src*="bolt"],
+      .bolt-badge,
+      #bolt-badge,
+      .bolt-header,
+      [class*="bolt-header"],
+      [backdrop-filter] + div:not(#root) {
+        display: none !important;
+        height: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+  </body>
+</html>
